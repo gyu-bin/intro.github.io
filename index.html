@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <div id="toggle"></div>
+        <div id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Team">Team</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="fullpage">
+    <section id="home" class="home">
+        <div class="intro">
+            <!-- <img src="img/pexels-karol-d-841228.jpg"> -->
+           <h2>Developer 문규빈의 포트폴리오 입니다.</h2>
+        </div>   
+    </section>
+    <section id="About">About</section>
+    <section id="Services">Services</section>
+    <section id="Team">Team</section>
+    <section id="Portfolio">Portfolio</section>
+    <section id="Contact">Contact</section>
+</div>
+    <script>
+        const header=document.getElementById('header');
+        const toggle=document.getElementById('toggle');
+        const navbar=document.getElementById('navbar');
+
+        document.onclick=function(e){
+            if(e.target.id!=='header'&& e.target.id!=='toggle' && e.target.id!=='navbar'){
+                toggle.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        }
+
+        toggle.onclick=function(){
+            toggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        }
+    </script>
+     <script src='main.js'></script>
+</body>
+</html>
